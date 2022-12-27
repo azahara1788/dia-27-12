@@ -21,7 +21,6 @@ async function main() {
 
     await connection.query("DROP TABLE IF EXISTS users");
     await connection.query(`DROP TABLE IF EXISTS products`);
-    
 
     //Crear tablas
     console.log("creando tablas...");
@@ -43,8 +42,6 @@ async function main() {
     FOREIGN KEY (users_id) REFERENCES users (id)
   )`);
 
-    
-
     console.log("Tablas creadas correctamente");
   } catch (e) {
     console.error(e);
@@ -55,4 +52,3 @@ async function main() {
 }
 
 main();
-
